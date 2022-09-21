@@ -1,0 +1,48 @@
+.bag {
+    top: 0;
+    right: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    grid-template-columns: 1fr 35%;
+
+    z-index: 2000;
+
+    .backdrop {
+        background-color: var(--black-clr);
+        opacity: .7;
+    }
+
+    .bag__container {
+        background-color: var(--red-clr);;
+        color: var(--white-clr);
+
+        flex-direction: column;
+        justify-content: space-between;
+
+        .bag__heading {
+            width: 100%;
+
+            justify-content: space-between;
+            align-items: center;
+
+            font-size: 2rem;
+
+            padding: 3rem;
+        }
+
+        .return__btn {
+            place-items: center;
+
+            width: 100%;
+            height: 5rem;
+
+            background-color: rgb(250, 242, 230);
+            color: var(--red-clr);
+
+            font-size: 1.7rem;
+        }
+    }
+    
+}

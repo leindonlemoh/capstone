@@ -1,0 +1,99 @@
+:root {
+  --lightbrown-clr: rgb(211, 194, 172);
+  --yellow-clr: rgb(248, 208, 161);
+  --brown-clr: rgb(92, 75, 68);
+  --green-clr: rgb(54, 139, 105);
+  --chocolate-clr: rgb(154, 79, 26);
+  --darkbrown-clr: rgb(188, 179, 164);
+  --red-clr: #008080;
+  --pink-clr: rgb(255, 8, 102);
+  --white-clr: rgb(255, 255, 255);
+  --darkwhite-clr: rgb(252, 252, 252);
+  --black-clr: rgb(13, 13, 13);
+  
+  --main-fnt: 'General Sans', sans-serif;
+  --logo-fnt: 'Zodiak', serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+a {
+  color: inherit;
+
+  text-decoration: none;
+}
+
+ul {list-style: none;}
+
+button {
+  display: block;
+
+  border: none;
+
+  background: none;
+
+  font: inherit;
+
+  color: inherit;
+
+  cursor: pointer;
+}
+
+input {
+  display: block;
+
+  width: 100%;
+
+  font: inherit;
+
+  outline: none;
+
+  color: inherit;
+}
+
+textarea {
+  outline: none;
+  resize: none;
+
+  color: inherit;
+
+  font: inherit;
+}
+
+input::placeholder {font: inherit;}
+
+span {
+  display: inline;
+}
+
+html {
+  overscroll-behavior: contain;
+}
+
+body {
+  font-family: var(--logo-fnt);
+  background-color: #faf2e6;
+}
+
+
+.flex {display: flex;}
+
+.grid {display: grid;}
+
+.fixed {position: fixed;}
+
+.absolute {position: absolute;}
+
+.relative {position: relative;}
+
+.second__container {
+  width: 100%;
+}
