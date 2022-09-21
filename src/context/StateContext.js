@@ -4,16 +4,25 @@ const Context = createContext();
 
 export const StateContext = ({ children }) => {
   const [toggleBag, setToggleBag] = useState(false);
-  const [toggleMenu, setToggleMenu] = useState(false);
+  const [accordionIndex, setAccordionIndex] = useState(null);
+
+  const toggleAccordion = (i) => {
+    if (accordionIndex === i) {
+        return setAccordionIndex(null)
+    }
+
+    setAccordionIndex(i)
+  };
 
 
   return (
     <Context.Provider
         value={{ 
           toggleBag, 
-          setToggleBag,        
-          toggleMenu, 
-          setToggleMenu,        
+          setToggleBag, 
+          accordionIndex, 
+          setAccordionIndex,
+          toggleAccordion  
          }}
     >
         {children}

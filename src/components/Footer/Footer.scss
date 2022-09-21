@@ -1,0 +1,92 @@
+.footer {
+    width: 100%;
+    height: 70vh;
+
+    background-color: var(--fnt-clr);
+    color: var(--bg-clr);
+
+    .footer__grid {
+        width: 100%;
+        height: 100%;
+        padding: 5rem 2rem;
+
+        grid-template-columns: 1fr 1fr;
+
+        .logo__container {
+            width: max-content;
+            
+            h1 {
+                font-size: 4rem;
+                font-weight: 800;   
+
+                letter-spacing: -2px;
+        
+                text-transform: lowercase;
+
+                position: relative;
+
+                &::after {
+                    content: "\000AE";
+
+                    position: absolute;
+                    top: 15%;
+                    left: 100%;
+
+                    width: 100%;
+                    height: 100%;
+
+                    font-size: 16px;
+                }
+            }
+        }
+
+        .big__text {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+        }
+
+        .small__text {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .input {
+            border: none;
+            color: var(--fnt-clr);
+            width: 28rem;
+            height: 3rem;
+
+            padding: .5rem 1rem;
+
+            &::placeholder {
+                text-align: left;
+
+                font-size: 1.2rem;
+            }
+        }
+
+        .submit__btn {
+            max-width: max-content;
+            border: none;
+            outline: none;
+            background: none;
+            height: 3rem;
+
+            padding: .5rem 1rem;
+
+            color: var(--bg-clr);
+        }
+
+        .long__text {
+            p {
+                text-align: justify;
+                font-size: 1.5rem;
+            }
+        }
+
+        .footer__list {
+            font-size: 1.2rem;
+        }
+    }
+}

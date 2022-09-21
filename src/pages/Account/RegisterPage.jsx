@@ -6,7 +6,7 @@ const RegisterPage = () => {
     <div className="register">
       <form className="register-form">
         <h4>Create Account</h4>
-        {/*  */}
+    
         <div className="form-floating mb-3 ">
           <input
             type="text"
@@ -14,9 +14,8 @@ const RegisterPage = () => {
             id="floatingInput"
             placeholder="First Name"
           />
-          <label htmlFor="floatingInput">First Name</label>
         </div>
-        {/*  */}
+ 
         <div className="form-floating mb-3 ">
           <input
             type="text"
@@ -24,19 +23,19 @@ const RegisterPage = () => {
             id="floatingInput"
             placeholder="Last Name"
           />
-          <label htmlFor="floatingInput">Last Name</label>
+          
         </div>
-        {/*  */}
+
         <div className="form-floating mb-3 ">
           <input
             type="email"
             className="form-control email-register"
             id="floatingInput"
-            placeholder="name@example.com"
+            placeholder="Email"
           />
-          <label htmlFor="floatingInput">Email</label>
+         
         </div>
-        {/*  */}
+     
         <div className="form-floating mb-3 ">
           <input
             type="password"
@@ -44,9 +43,9 @@ const RegisterPage = () => {
             id="floatingPassword"
             placeholder="Password"
           />
-          <label htmlFor="floatingPassword">Password</label>
+         
         </div>
-        {/*  */}
+   
         <input
           type="submit"
           value="Register"
@@ -56,7 +55,7 @@ const RegisterPage = () => {
           <p className="create">
             I have an account.
             <br />
-            <a href="#">Go to Log-in</a>
+        Go to Log-in
           </p>
         </div>
       </form>

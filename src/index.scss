@@ -1,18 +1,10 @@
 :root {
-  --lightbrown-clr: rgb(211, 194, 172);
-  --yellow-clr: rgb(248, 208, 161);
-  --brown-clr: rgb(92, 75, 68);
-  --green-clr: rgb(54, 139, 105);
-  --chocolate-clr: rgb(154, 79, 26);
-  --darkbrown-clr: rgb(188, 179, 164);
-  --red-clr: #008080;
-  --pink-clr: rgb(255, 8, 102);
-  --white-clr: rgb(255, 255, 255);
-  --darkwhite-clr: rgb(252, 252, 252);
-  --black-clr: rgb(13, 13, 13);
+  --fnt-clr: rgb(0, 128, 128);
+  --bg-clr: #faf2e6;
+  --qty-clr: rgb(254, 13, 73);
   
-  --main-fnt: 'General Sans', sans-serif;
-  --logo-fnt: 'Zodiak', serif;
+  --product-fnt: 'General Sans', sans-serif;
+  --main-fnt: 'Zodiak', serif;
 }
 
 *, *::before, *::after {
@@ -79,8 +71,9 @@ html {
 }
 
 body {
-  font-family: var(--logo-fnt);
-  background-color: #faf2e6;
+  font-family: var(--main-fnt);
+  color: var(--fnt-clr);
+  background-color: var(--bg-clr);
 }
 
 

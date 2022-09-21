@@ -2,8 +2,7 @@
     width: 100%;
     height: max-content;
 
-    color: var(--red-clr);
-    background-color: rgb(250, 242, 230);
+    background-color: var(--bg-clr);
 
     top: 0;
     left: 0;
@@ -25,8 +24,6 @@
             place-items: center;
             
             h1 {
-                font-family: var(--logo-fnt);
-                
                 font-size: 2.7rem;
                 font-weight: 800;   
 
@@ -64,12 +61,12 @@
 
             .bag__qty {
                 font-weight: 400;
-                color: var(--pink-clr);
+                color: var(--qty-clr);
             }
         }
     }
 }
 
 .activeNav {
-    color: rgb(160, 160, 160);
+    opacity: .75;
 }
