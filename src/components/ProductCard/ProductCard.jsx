@@ -6,7 +6,7 @@ const ProductCard = () => {
   return (
         <div className='product__card'>
             <Link to='/product/id'>
-                <img src='/sample1.jpg' alt='sample' style={{width: '100%', opacity: '.94'}} />
+                <img src='sample1.jpg' alt='sample' style={{width: '100%', opacity: '.94'}} />
             </Link>
 
             <div className='overlay flex absolute'>

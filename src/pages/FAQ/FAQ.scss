@@ -1,0 +1,55 @@
+div.faq {
+
+    padding: 10rem 0;
+
+    header.faq {
+        width: 100%;
+
+        justify-content: center;
+        align-items: center;
+
+        font-size: 4rem;
+    }
+
+    .accordion__container {
+        padding: 5rem 5rem;
+    }
+}
+
+
+section.privacy {
+    width: 100%;
+
+    padding: 5rem 2rem;
+
+
+    header.privacy {
+        width: 100%;
+
+        justify-content: center;
+        align-items: center;
+
+        font-size: 4rem;
+
+        margin-bottom: 10rem;
+    }
+
+    span {
+        padding: 0 10rem;
+        font-size: 2rem;
+        font-weight: 600;
+        opacity: .75;
+
+        line-height: .5;
+        
+    }
+
+    ul.faq__list {
+        padding: 0 10rem;
+        list-style: circle;
+
+        li {
+            margin: 1rem 0
+        }
+    }
+}

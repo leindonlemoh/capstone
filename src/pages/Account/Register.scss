@@ -5,8 +5,6 @@
   justify-content: center;
   align-items: center;
   .register-form {
-    height: 500px;
-    width: 700px;
 
     justify-content: center;
     text-align: center;
@@ -17,9 +15,15 @@
     font-size: 50px;
   }
   .register-btn {
-    height: 60px;
+    width: 40rem;
+    height: 4rem;
+    cursor: pointer;
+    border: none;
     font-size: 30px;
-    font-family: Zodiak, serif;
+    margin-top: 3rem;
+
+    background-color: #008080;
+    color: var(--bg-clr);
   }
 }
 label {
@@ -29,49 +33,48 @@ label {
   align-items: center;
 }
 .first-name {
+  width: 40rem;
+  height: 2rem;
+  padding: .1rem 1rem;
   margin-top: 50px;
   border: none;
   background: none;
   border-bottom: 1px solid #008080;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-  display: flex;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
 }
 .last-name {
+  width: 40rem;
+  height: 2rem;
+  padding: .1rem 1rem;
   margin-top: 20px;
   border: none;
   background: none;
   border-bottom: 1px solid #008080;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-  display: flex;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
 }
 .email-register {
+  width: 40rem;
+  height: 2rem;
+  padding: .1rem 1rem;
   margin-top: 20px;
   border: none;
   background: none;
   border-bottom: 1px solid #008080;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-  display: flex;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
 }
 .password-register {
+  width: 40rem;
+  height: 2rem;
+  padding: .1rem 1rem;
   border: none;
   background: none;
   margin-top: 20px;
   border-bottom: 1px solid #008080;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
 }
 .login-link {
-  font-family: Zodiak, serif;
   margin-top: 20px;
+}
+
+.form-control::placeholder {
+  color: #008080;
+  text-align: center;
+
+  font-size: 1.7rem;
 }

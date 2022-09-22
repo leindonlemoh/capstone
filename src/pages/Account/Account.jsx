@@ -1,9 +1,13 @@
 import React from 'react';
 import './Account.scss';
+import { RegisterPage, LoginPage } from '../'
 
 const Account = () => {
   return (
-    <div>Account</div>
+    <div>
+      <LoginPage />
+      <RegisterPage />
+    </div>
   );
 }
 
