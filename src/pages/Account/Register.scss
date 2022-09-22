@@ -11,7 +11,7 @@
   }
   h4 {
     font-family: Zodiak, serif;
-    color: #008080;
+    color: var(--fnt-clr);
     font-size: 50px;
   }
   .register-btn {
@@ -22,7 +22,7 @@
     font-size: 30px;
     margin-top: 3rem;
 
-    background-color: #008080;
+    background-color: var(--fnt-clr);
     color: var(--bg-clr);
   }
 }
@@ -39,7 +39,7 @@ label {
   margin-top: 50px;
   border: none;
   background: none;
-  border-bottom: 1px solid #008080;
+  border-bottom: 1px solid var(--fnt-clr);
 }
 .last-name {
   width: 40rem;
@@ -48,7 +48,7 @@ label {
   margin-top: 20px;
   border: none;
   background: none;
-  border-bottom: 1px solid #008080;
+  border-bottom: 1px solid var(--fnt-clr);
 }
 .email-register {
   width: 40rem;
@@ -57,7 +57,7 @@ label {
   margin-top: 20px;
   border: none;
   background: none;
-  border-bottom: 1px solid #008080;
+  border-bottom: 1px solid var(--fnt-clr);
 }
 .password-register {
   width: 40rem;
@@ -66,14 +66,14 @@ label {
   border: none;
   background: none;
   margin-top: 20px;
-  border-bottom: 1px solid #008080;
+  border-bottom: 1px solid var(--fnt-clr);
 }
 .login-link {
   margin-top: 20px;
 }
 
 .form-control::placeholder {
-  color: #008080;
+  color: var(--fnt-clr);
   text-align: center;
 
   font-size: 1.7rem;

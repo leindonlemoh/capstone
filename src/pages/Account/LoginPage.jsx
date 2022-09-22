@@ -1,7 +1,10 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./Login.scss";
 
 const Login = () => {
+    const navigate = useNavigate();
+
     return (
         <div className='login-page'>
             <form className='login-form'>
@@ -30,9 +33,8 @@ const Login = () => {
                 <div className='link'>
                     <p className='create'>
                         Haven't been here before?
-                        <br />
-                        Create Your Account
                     </p>
+                    <button className='flex' style={{justifyContent: 'center', width: '100%'}} onClick={() => {navigate('/account/register')}}>Create Your Account</button>
                 </div>
             </form>
         </div>
