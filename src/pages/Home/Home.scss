@@ -6,8 +6,41 @@
     height: 100vh;
     border-bottom: 1px solid;
   }
+  .Banner {
+    position: block;
+    color: white;
+    .banner-con {
+      position: relative;
+      .banner-image {
+        filter: brightness(60%);
+      }
+      .banner-text {
+        position: absolute;
+        bottom: 150px;
+        left: 70px;
+        h3 {
+          font-size: 90px;
+        }
+        p {
+          font-size: 27px;
+        }
+        .btn {
+          background-color: var(--fnt-clr);
+          color: var(--bg-clr);
+          height: 60px;
+          width: 200px;
+          font-size: 30px;
+        }
+      }
+    }
+  }
+
   .offer {
     text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top: 200px;
     .text-offer {
       color: var(--fnt-clr);
       h4 {
@@ -19,8 +52,114 @@
         font-size: 20px;
       }
     }
-    .products-row {
+    .products {
       margin-top: 50px;
+    }
+  }
+  //
+  .how {
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 50px;
+
+      .how-content {
+        margin-top: 100px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 200px;
+        .sign-up {
+          border: 2px dashed var(--fnt-clr);
+          border-radius: 100%;
+          padding: 30px;
+          text-align: center;
+          height: 300px;
+          width: 300px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+
+          h5 {
+            font-weight: 900;
+            font-size: 30px;
+          }
+        }
+        .how-shop {
+          border: 2px dashed var(--fnt-clr);
+          border-radius: 100%;
+          padding: 30px;
+          text-align: center;
+          height: 300px;
+          width: 300px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          h5 {
+            font-weight: 900;
+            font-size: 30px;
+          }
+        }
+        .go {
+          border: 2px dashed var(--fnt-clr);
+          border-radius: 100%;
+          padding: 30px;
+          text-align: center;
+          height: 300px;
+          width: 300px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          h5 {
+            font-weight: 900;
+            font-size: 30px;
+          }
+        }
+      }
+      .how-title {
+        h4 {
+          font-weight: bolder;
+          font-size: 50px;
+        }
+      }
+    }
+  }
+
+  .home-workshop {
+    display: flex;
+    flex-direction: column;
+
+    .hw-contact {
+      text-align: center;
+    }
+    .ws-images {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin-left: 90px;
+      gap: 100px;
+      .center-image {
+        p {
+          text-align: center;
+        }
+      }
+      .left-image {
+        object-fit: cover;
+        width: 500px;
+        height: 500px;
+      }
+      .right-image {
+        object-fit: cover;
+        width: 500px;
+        height: 500px;
+      }
     }
   }
 }
