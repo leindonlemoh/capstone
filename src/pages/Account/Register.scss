@@ -5,7 +5,6 @@
   justify-content: center;
   align-items: center;
   .register-form {
-
     justify-content: center;
     text-align: center;
   }
@@ -35,37 +34,61 @@ label {
 .first-name {
   width: 40rem;
   height: 2rem;
-  padding: .1rem 1rem;
+  padding: 0.1rem 1rem;
   margin-top: 50px;
   border: none;
   background: none;
+  border-radius: 0;
   border-bottom: 1px solid #008080;
 }
 .last-name {
   width: 40rem;
   height: 2rem;
-  padding: .1rem 1rem;
+  padding: 0.1rem 1rem;
   margin-top: 20px;
   border: none;
   background: none;
+  border-radius: 0;
   border-bottom: 1px solid #008080;
 }
-.email-register {
+#email {
   width: 40rem;
   height: 2rem;
-  padding: .1rem 1rem;
+  padding: 0.1rem 1rem;
   margin-top: 20px;
   border: none;
   background: none;
+  border-radius: 0;
+  border-bottom: 1px solid #008080;
+}
+.address-register {
+  width: 40rem;
+  height: 2rem;
+  padding: 0.1rem 1rem;
+  margin-top: 20px;
+  border: none;
+  background: none;
+  border-radius: 0;
+  border-bottom: 1px solid #008080;
+}
+.contact-register {
+  width: 40rem;
+  height: 2rem;
+  padding: 0.1rem 1rem;
+  margin-top: 20px;
+  border: none;
+  background: none;
+  border-radius: 0;
   border-bottom: 1px solid #008080;
 }
 .password-register {
   width: 40rem;
   height: 2rem;
-  padding: .1rem 1rem;
+  padding: 0.1rem 1rem;
   border: none;
   background: none;
   margin-top: 20px;
+  border-radius: 0;
   border-bottom: 1px solid #008080;
 }
 .login-link {

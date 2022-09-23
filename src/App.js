@@ -1,5 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Home, Layout, Shop, About, Account,Product, FAQ } from "./pages";
+import { Home, Layout, Shop, About, Account, Product, FAQ } from "./pages";
+import axios from "axios";
+axios.defaults.baseURL = "http://localhost:3001";
 
 function App() {
   return (
