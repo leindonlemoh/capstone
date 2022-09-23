@@ -1,6 +1,6 @@
 import React from 'react';
 import { Bag } from '../';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink} from 'react-router-dom';
 import { useStateContext } from '../../context/StateContext';
 import './Header.scss';
 
@@ -18,13 +18,13 @@ const Header = () => {
 
         <nav>
             <ul className='nav__list flex'>
-                <NavLink to='/shop' className={({isActive}) => (isActive ? 'activeNav' : '')}>
+                <NavLink to='shop' className={({isActive}) => (isActive ? 'activeNav' : '')}>
                     <li className='nav__item'>Shop</li>
                 </NavLink>
-                <NavLink to='/about' className={({isActive}) => (isActive ? 'activeNav' : '')}>
+                <NavLink to='about' className={({isActive}) => (isActive ? 'activeNav' : '')}>
                     <li className='nav__item'>About</li>
                 </NavLink>
-                <NavLink to='/account' className={({isActive}) => (isActive ? 'activeNav' : '')}>
+                <NavLink to='account/login' className={({isActive}) => (isActive ? 'activeNav' : '')}>
                     <li className='nav__item'>Account</li>
                 </NavLink>
 

@@ -1,4 +1,6 @@
 .register {
+  margin-top: 300px;
+  margin-bottom: 100px;
   height: 100vh;
   width: 100%;
   display: flex;
@@ -10,7 +12,7 @@
   }
   h4 {
     font-family: Zodiak, serif;
-    color: #008080;
+    color: var(--fnt-clr);
     font-size: 50px;
   }
   .register-btn {
@@ -21,7 +23,7 @@
     font-size: 30px;
     margin-top: 3rem;
 
-    background-color: #008080;
+    background-color: var(--fnt-clr);
     color: var(--bg-clr);
   }
 }
@@ -39,7 +41,7 @@ label {
   border: none;
   background: none;
   border-radius: 0;
-  border-bottom: 1px solid #008080;
+  border-bottom: 1px solid var(--fnt-clr);
 }
 .last-name {
   width: 40rem;
@@ -49,9 +51,10 @@ label {
   border: none;
   background: none;
   border-radius: 0;
-  border-bottom: 1px solid #008080;
+
+  border-bottom: 1px solid var(--fnt-clr);
 }
-#email {
+.email {
   width: 40rem;
   height: 2rem;
   padding: 0.1rem 1rem;
@@ -59,7 +62,7 @@ label {
   border: none;
   background: none;
   border-radius: 0;
-  border-bottom: 1px solid #008080;
+  border-bottom: 1px solid var(--fnt-clr);
 }
 .address-register {
   width: 40rem;
@@ -69,7 +72,7 @@ label {
   border: none;
   background: none;
   border-radius: 0;
-  border-bottom: 1px solid #008080;
+  border-bottom: 1px solid var(--fnt-clr);
 }
 .contact-register {
   width: 40rem;
@@ -79,9 +82,9 @@ label {
   border: none;
   background: none;
   border-radius: 0;
-  border-bottom: 1px solid #008080;
+  border-bottom: 1px solid var(--fnt-clr);
 }
-.password-register {
+.password {
   width: 40rem;
   height: 2rem;
   padding: 0.1rem 1rem;
@@ -89,14 +92,14 @@ label {
   background: none;
   margin-top: 20px;
   border-radius: 0;
-  border-bottom: 1px solid #008080;
+  border-bottom: 1px solid var(--fnt-clr);
 }
 .login-link {
   margin-top: 20px;
 }
 
 .form-control::placeholder {
-  color: #008080;
+  color: var(--fnt-clr);
   text-align: center;
 
   font-size: 1.7rem;
