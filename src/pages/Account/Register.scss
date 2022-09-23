@@ -5,13 +5,12 @@
   justify-content: center;
   align-items: center;
   .register-form {
-
     justify-content: center;
     text-align: center;
   }
   h4 {
     font-family: Zodiak, serif;
-    color: var(--fnt-clr);
+    color: #008080;
     font-size: 50px;
   }
   .register-btn {
@@ -22,7 +21,7 @@
     font-size: 30px;
     margin-top: 3rem;
 
-    background-color: var(--fnt-clr);
+    background-color: #008080;
     color: var(--bg-clr);
   }
 }
@@ -35,45 +34,69 @@ label {
 .first-name {
   width: 40rem;
   height: 2rem;
-  padding: .1rem 1rem;
+  padding: 0.1rem 1rem;
   margin-top: 50px;
   border: none;
   background: none;
-  border-bottom: 1px solid var(--fnt-clr);
+  border-radius: 0;
+  border-bottom: 1px solid #008080;
 }
 .last-name {
   width: 40rem;
   height: 2rem;
-  padding: .1rem 1rem;
+  padding: 0.1rem 1rem;
   margin-top: 20px;
   border: none;
   background: none;
-  border-bottom: 1px solid var(--fnt-clr);
+  border-radius: 0;
+  border-bottom: 1px solid #008080;
 }
-.email-register {
+#email {
   width: 40rem;
   height: 2rem;
-  padding: .1rem 1rem;
+  padding: 0.1rem 1rem;
   margin-top: 20px;
   border: none;
   background: none;
-  border-bottom: 1px solid var(--fnt-clr);
+  border-radius: 0;
+  border-bottom: 1px solid #008080;
+}
+.address-register {
+  width: 40rem;
+  height: 2rem;
+  padding: 0.1rem 1rem;
+  margin-top: 20px;
+  border: none;
+  background: none;
+  border-radius: 0;
+  border-bottom: 1px solid #008080;
+}
+.contact-register {
+  width: 40rem;
+  height: 2rem;
+  padding: 0.1rem 1rem;
+  margin-top: 20px;
+  border: none;
+  background: none;
+  border-radius: 0;
+  border-bottom: 1px solid #008080;
 }
 .password-register {
   width: 40rem;
   height: 2rem;
-  padding: .1rem 1rem;
+  padding: 0.1rem 1rem;
   border: none;
   background: none;
   margin-top: 20px;
-  border-bottom: 1px solid var(--fnt-clr);
+  border-radius: 0;
+  border-bottom: 1px solid #008080;
 }
 .login-link {
   margin-top: 20px;
 }
 
 .form-control::placeholder {
-  color: var(--fnt-clr);
+  color: #008080;
   text-align: center;
 
   font-size: 1.7rem;

@@ -1,12 +1,12 @@
 import React from 'react';
-//import { LoginPage } from '..';
 import './Account.scss';
-import { Outlet } from 'react-router-dom';
+import { RegisterPage, LoginPage } from '../'
 
 const Account = () => {
   return (
     <div>
-      <Outlet />
+      <LoginPage />
+      <RegisterPage />
     </div>
   );
 }
