@@ -1,9 +1,13 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 import "./Login.scss";
 import axios from "axios";
 import swal from "sweetalert";
 
 const Login = () => {
+  const navigate = useNavigate();
+
   const [user, setUser] = useState({
     email: "",
     password: "",
@@ -46,10 +50,10 @@ const Login = () => {
             value={user.email}
           />
         </div>
-        {/*  */}
+        {/* password */}
         <div className="form-floating mb-3 ">
           <input
-            className={`form-control password`}
+            className={`form-control password `}
             name="password"
             id="password"
             type="password"
@@ -58,13 +62,13 @@ const Login = () => {
             value={user.password}
           />
         </div>
-        {/*  */}
+        {/* button  */}
         <div className="input-group mb-3">
           <input
             type="submit"
-            value="Login"
+            value="Log-in"
             className="btn btn-primary mt-5 login-btn"
-          ></input>
+          />
         </div>
         {/*  */}
         <div className="link">
