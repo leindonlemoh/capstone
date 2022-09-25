@@ -41,8 +41,13 @@
     display: flex;
     flex-direction: column;
     margin-top: 200px;
+
+    padding: 50px;
+
+
     .text-offer {
       color: var(--fnt-clr);
+      border: 5px solid #60370e;
       h4 {
         margin-top: 50px;
         font-size: 50px;

@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import {
   Home,
@@ -9,11 +10,14 @@ import {
   FAQ,
   LoginPage,
   RegisterPage,
+  AddProducts,
 } from "./pages";
 import axios from "axios";
 axios.defaults.baseURL = "http://localhost:3001";
 
 function App() {
+  const [loggedInUser, setLoggedInUser] = useState({});
+
   return (
     <div className="App">
       <BrowserRouter>
@@ -21,13 +25,18 @@ function App() {
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
             <Route path="shop" element={<Shop />} />
-            <Route path="about" element={<About />} />
+            <Route path="about" element={<About user={loggedInUser} />} />
             <Route path="account" element={<Account />}>
-              <Route exact path="login" element={<LoginPage />} />
+              <Route
+                exact
+                path="login"
+                element={<LoginPage onLogin={setLoggedInUser} />}
+              />
               <Route exact path="register" element={<RegisterPage />} />
             </Route>
             <Route path="product/id" element={<Product />} />
             <Route path="faq" element={<FAQ />} />
+            <Route path="addproduct" element={<AddProducts />}></Route>
           </Route>
         </Routes>
       </BrowserRouter>
