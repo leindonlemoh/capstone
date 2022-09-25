@@ -5,7 +5,7 @@ import "./Login.scss";
 import axios from "axios";
 import swal from "sweetalert";
 
-const Login = () => {
+const Login = ({ onLogin }) => {
   const navigate = useNavigate();
 
   const [user, setUser] = useState({
@@ -27,6 +27,12 @@ const Login = () => {
       .post("/users/login", data)
       .then((res) => {
         swal("Success", "Logged in Successfully", "success");
+        onLogin({
+          id: res.data.user_id,
+          first_ame: res.data.first_name,
+          last_name: res.data.last_name,
+          is_admin: res.data.is_admin,
+        });
       })
       .catch((err) => {
         console.log(err.response.data);

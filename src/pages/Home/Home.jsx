@@ -145,11 +145,11 @@ const Home = () => {
             </p>
           </div>
           <div className="ws-images">
-            <div className="image">
+            <div className="center-image">
               <img src={Left} alt="baking" className="left-image" />
               <p>Monday, 10AM To 11 AM</p>
             </div>
-            <div className="image">
+            <div className="center-image">
               <img src={Right} alt="baking" className="right-image" />
               <p>Wednesday, 1PM To 2 PM</p>
             </div>
