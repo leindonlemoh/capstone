@@ -33,10 +33,10 @@ function App() {
                 element={<LoginPage onLogin={setLoggedInUser} />}
               />
               <Route exact path="register" element={<RegisterPage />} />
+              <Route path="addproduct" element={<AddProducts />}></Route>
             </Route>
             <Route path="product/id" element={<Product />} />
             <Route path="faq" element={<FAQ />} />
-            <Route path="addproduct" element={<AddProducts />}></Route>
           </Route>
         </Routes>
       </BrowserRouter>
