@@ -29,8 +29,6 @@ const Home = () => {
             <p>
               We only use the finest ingredients, and we favour organic,
               <br />
-              sustainable and local procedure.
-              <br />
               sustainable and local procedure. <br />
               The result is heartfelt goodnesswith quality baked in.
             </p>
@@ -103,7 +101,7 @@ const Home = () => {
       <section className="how">
         <div className="container">
           <div className="how-title">
-            <h4>How?</h4>
+            <h4>How To Join Making Dough?</h4>
           </div>
           <div className="how-content">
             <div className=" sign-up circle">
@@ -137,6 +135,7 @@ const Home = () => {
           </div>
         </div>
       </section>
+      
       <section className="home-workshop">
         <div className="hw-content">
           <div className="hw-contact">
@@ -153,10 +152,7 @@ const Home = () => {
               <p>Monday, 10AM To 11 AM</p>
             </div>
             <div className="center-image">
-              <div className="image">
-                <img src={Left} alt="baking" className="left-image" />
-                <p>Monday, 10AM To 11 AM</p>
-              </div>
+              
               <div className="image">
                 <img src={Right} alt="baking" className="right-image" />
                 <p>Wednesday, 1PM To 2 PM</p>
@@ -166,6 +162,8 @@ const Home = () => {
           </div>
         </div>
       </section>
+       
+        
     </div>
   );
 };
