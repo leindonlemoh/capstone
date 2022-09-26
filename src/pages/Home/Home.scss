@@ -4,7 +4,7 @@
 
   section {
     height: 100vh;
-    border-bottom: 1px solid;
+    // border-bottom: 1px solid;
   }
   .Banner {
     position: block;
@@ -26,10 +26,10 @@
         }
         .btn {
           background-color: var(--fnt-clr);
-          color: var(--bg-clr);
+          color: whitesmoke;
           height: 60px;
           width: 200px;
-          font-size: 30px;
+          font-size: 20px;
         }
       }
     }
@@ -50,7 +50,7 @@
       border: 5px solid #60370e;
       h4 {
         margin-top: 50px;
-        font-size: 50px;
+        font-size: 30px;
       }
       p {
         margin-top: 30px;
@@ -76,7 +76,7 @@
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        gap: 200px;
+        gap: 100px;
         .sign-up {
           border: 2px dashed var(--fnt-clr);
           border-radius: 100%;
@@ -130,7 +130,7 @@
       .how-title {
         h4 {
           font-weight: bolder;
-          font-size: 50px;
+          font-size: 30px;
         }
       }
     }

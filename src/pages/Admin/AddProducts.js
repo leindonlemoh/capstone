@@ -13,25 +13,39 @@ const AddProducts = ({ user }) => {
   });
 
   const onInputChange = (e) => {
+    let value = e.target.value;
+
+    if (e.target.name === "product_image") {
+      value = e.target.files[0];
+    }
+
     setProduct({
       ...product,
-      [e.target.name]: e.target.value,
+      [e.target.name]: value,
     });
   };
 
   const onFormSubmit = (e) => {
     e.preventDefault();
-    const data = {
-      product_name: product.product_name,
-      product_image: product.product_image,
-      product_price: product.product_price,
-      category_id: product.category_id,
-      product_description: product.product_description,
-    };
-    axios.post("http://localhost:3001/users/addproducts", data).then((res) => {
-      swal("Success", "New Product Added", "success");
-      console.log(res);
-    });
+    // const data = {
+    //   product_name: product.product_name,
+    //   product_image: product.product_image,
+    //   product_price: product.product_price,
+    //   category_id: product.category_id,
+    //   product_description: product.product_description,
+    // };
+
+    const formData = new FormData();
+    for (let field in product) {
+      formData.append(field, product[field]);
+    }
+
+    axios
+      .post("http://localhost:3001/users/addproducts", formData)
+      .then((res) => {
+        swal("Success", "New Product Added", "success");
+        console.log(res);
+      });
   };
 
   if (!user.is_admin) {
@@ -39,7 +53,11 @@ const AddProducts = ({ user }) => {
   }
   return (
     <div className="Products">
-      <form className="addProduct-form" onSubmit={onFormSubmit}>
+      <form
+        className="addProduct-form"
+        onSubmit={onFormSubmit}
+        encType="multipart/form-data"
+      >
         <h4>Add Products</h4>
 
         {/* NAME */}
@@ -78,10 +96,10 @@ const AddProducts = ({ user }) => {
         <div className="upimage">
           <input
             className="form-control form-control-lg"
-            id=" product_image"
+            id="product_image"
+            name="product_image"
             type="file"
             onChange={onInputChange}
-            value={product.product_image}
           />
           <label htmlFor="formFileLg" className="form-label">
             Upload image
