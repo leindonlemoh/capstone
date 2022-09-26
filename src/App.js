@@ -37,6 +37,10 @@ function App() {
             </Route>
             <Route path="product/id" element={<Product />} />
             <Route path="faq" element={<FAQ />} />
+            <Route
+              path="addproduct"
+              element={<AddProducts user={loggedInUser} />}
+            ></Route>
           </Route>
         </Routes>
       </BrowserRouter>
