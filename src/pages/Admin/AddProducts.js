@@ -1,62 +1,145 @@
-import React from "react";
+import React, { useState } from "react";
 import "./AddProducts.scss";
+import axios from "axios";
+import swal from "sweetalert";
 
-const AddProducts = () => {
+const AddProducts = ({ user }) => {
+  const [product, setProduct] = useState({
+    product_name: "",
+    product_image: "",
+    product_price: "",
+    category_id: "",
+    product_description: "",
+  });
+
+  const onInputChange = (e) => {
+    setProduct({
+      ...product,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const onFormSubmit = (e) => {
+    e.preventDefault();
+    const data = {
+      product_name: product.product_name,
+      product_image: product.product_image,
+      product_price: product.product_price,
+      category_id: product.category_id,
+      product_description: product.product_description,
+    };
+    axios.post("http://localhost:3001/users/addproducts", data).then((res) => {
+      swal("Success", "New Product Added", "success");
+      console.log(res);
+    });
+  };
+
+  if (!user.is_admin) {
+    return;
+  }
   return (
-    <div className="register">
-      <form className="register-form">
+    <div className="Products">
+      <form className="addProduct-form" onSubmit={onFormSubmit}>
         <h4>Add Products</h4>
-        {/*  */}
+
+        {/* NAME */}
+
         <div className="form-floating mb-3 ">
           <input
             type="text"
+            className="product-name"
             name="product_name"
             id="product_name"
             placeholder="Product Name"
+            onChange={onInputChange}
+            value={product.product_name}
           />
           <label htmlFor="floatingInput">Product Name</label>
         </div>
-        {/*  */}
-        <div className="form-floating mb-3 ">
+
+        {/* PRICE */}
+
+        <div className="form-floating mb-3">
           <input
-            type="text"
+            className="price"
+            type="number"
             name="product_price"
             id="product_price"
             placeholder="Product Price"
+            onChange={onInputChange}
+            value={product.product_price}
           />
-          <label htmlFor="floatingInput">Prodcust Price</label>
+          <label htmlFor="floatingInput">Product Price</label>
           {/* <span className="text-danger"> {user.error_list.last_name}</span> */}
         </div>
-        {/*  */}
-        <div className="form-floating mb-3 ">
-          <input type="file" name="product_image" id="product_image " />
-          <label htmlFor="floatingInput">Upload Image</label>
 
-          {/* <span className="text-danger"> {user.error_list.email}</span> */}
-        </div>
-        {/*  */}
-        <div className="form-floating mb-3 ">
+        {/* IMAGE */}
+
+        <div className="upimage">
           <input
+            className="form-control form-control-lg"
+            id=" product_image"
+            type="file"
+            onChange={onInputChange}
+            value={product.product_image}
+          />
+          <label htmlFor="formFileLg" className="form-label">
+            Upload image
+          </label>
+        </div>
+
+        {/* CATEGORY */}
+
+        <div className="dropdown-center category">
+          {/* <select
+            name="category_id"
+            className="category_id"
+            id="category_id"
+            onChange={onInputChange}
+            value={product.category_id}
+          >
+            <option value="1">Bread</option>
+            <option value="2">Pastry</option>
+            <option value="3">Sandwhich</option>
+          </select> */}
+
+          <select
+            class="form-select form-select-lg mb-3 category_id"
+            aria-label=".form-select-lg example"
+            name="category_id"
+            id="category_id"
+            onChange={onInputChange}
+            value={product.category_id}
+          >
+            <option selected>Select Category</option>
+            <option value="1">Bread</option>
+            <option value="2">Pastry</option>
+            <option value="3">Sandwhich</option>
+          </select>
+        </div>
+
+        {/* DESCRIPTION */}
+
+        <div className="form-floating ">
+          <textarea
+            placeholder="Description"
+            id="product_description"
+            className="form-control description-text"
             type="text"
             name="product_description"
-            id="product_description "
-          />
-          <label htmlFor="floatingInput">Product Description</label>
-          {/* <span className="text-danger"> {user.error_list.user_address}</span> */}
+            onChange={onInputChange}
+            value={product.product_description}
+          ></textarea>
+          <label htmlFor="floatingTextarea">Description</label>
         </div>
+
         {/*  */}
+
         <input
           type="submit"
-          value="Register"
+          value="Submit"
           className="btn btn-primary mt-5 register-btn"
         />
-        <div className="login-link">
-          <p className="create">
-            I have an account.
-            <br />
-            <a href="#">Go to Log-in</a>
-          </p>
-        </div>
       </form>
     </div>
   );

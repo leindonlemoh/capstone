@@ -28,13 +28,10 @@ const Home = () => {
             </h3>
             <p>
               We only use the finest ingredients, and we favour organic,
-
               <br />
               sustainable and local procedure.
               <br />
-
               sustainable and local procedure. <br />
-
               The result is heartfelt goodnesswith quality baked in.
             </p>
             <br />
@@ -151,23 +148,21 @@ const Home = () => {
             </p>
           </div>
           <div className="ws-images">
-
             <div className="center-image">
               <img src={Left} alt="baking" className="left-image" />
               <p>Monday, 10AM To 11 AM</p>
             </div>
             <div className="center-image">
-
-            <div className="image">
-              <img src={Left} alt="baking" className="left-image" />
-              <p>Monday, 10AM To 11 AM</p>
+              <div className="image">
+                <img src={Left} alt="baking" className="left-image" />
+                <p>Monday, 10AM To 11 AM</p>
+              </div>
+              <div className="image">
+                <img src={Right} alt="baking" className="right-image" />
+                <p>Wednesday, 1PM To 2 PM</p>
+              </div>
+              <div></div>
             </div>
-            <div className="image">
-
-              <img src={Right} alt="baking" className="right-image" />
-              <p>Wednesday, 1PM To 2 PM</p>
-            </div>
-            <div></div>
           </div>
         </div>
       </section>
