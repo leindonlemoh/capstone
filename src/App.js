@@ -11,6 +11,7 @@ import {
   LoginPage,
   RegisterPage,
   AddProducts,
+  UserAccount,
 } from "./pages";
 import axios from "axios";
 axios.defaults.baseURL = "http://localhost:3001";
@@ -33,6 +34,7 @@ function App() {
                 element={<LoginPage onLogin={setLoggedInUser} />}
               />
               <Route exact path="register" element={<RegisterPage />} />
+              <Route exact path="user-account" element={<UserAccount />} />
             </Route>
             <Route path="product/id" element={<Product />} />
             <Route path="faq" element={<FAQ />} />
