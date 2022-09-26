@@ -24,8 +24,8 @@ const Header = () => {
                 <NavLink to='about' className={({isActive}) => (isActive ? 'activeNav' : '')}>
                     <li className='nav__item'>About</li>
                 </NavLink>
-                <NavLink to='account/login' className={({isActive}) => (isActive ? 'activeNav' : '')}>
-                    <li className='nav__item'>Account</li>
+                <NavLink to='login' className={({isActive}) => (isActive ? 'activeNav' : '')}>
+                    <li className='nav__item'>Login</li>
                 </NavLink>
 
                 <button 

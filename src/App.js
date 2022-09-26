@@ -5,12 +5,12 @@ import {
   Layout,
   Shop,
   About,
-  Account,
   Product,
   FAQ,
   LoginPage,
   RegisterPage,
   AddProducts,
+  UserAccount
 } from "./pages";
 import axios from "axios";
 axios.defaults.baseURL = "http://localhost:3001";
@@ -25,22 +25,14 @@ function App() {
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
             <Route path="shop" element={<Shop />} />
+            <Route path="product/:id" element={<Product />} />
             <Route path="about" element={<About user={loggedInUser} />} />
-            <Route path="account" element={<Account />}>
-              <Route
-                exact
-                path="login"
-                element={<LoginPage onLogin={setLoggedInUser} />}
-              />
-              <Route exact path="register" element={<RegisterPage />} />
-              <Route path="addproduct" element={<AddProducts />}></Route>
-            </Route>
-            <Route path="product/id" element={<Product />} />
+            <Route exact path="login" element={<LoginPage onLogin={setLoggedInUser} />} />
+            <Route exact path="register" element={<RegisterPage />} />
+            <Route path="addproduct" element={<AddProducts user={loggedInUser} />} />
+            <Route path="account" element={<UserAccount user={loggedInUser} />} />
             <Route path="faq" element={<FAQ />} />
-            <Route
-              path="addproduct"
-              element={<AddProducts user={loggedInUser} />}
-            ></Route>
+
           </Route>
         </Routes>
       </BrowserRouter>

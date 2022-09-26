@@ -1,7 +1,11 @@
 import React from 'react';
 import './UserAccount.scss';
 
-const UserAccount = () => {
+const UserAccount = ({ user }) => {
+  
+  if (!user) {
+    return;
+  }
   return (
     <div className='user__account'>
       <div className='user__container'>
