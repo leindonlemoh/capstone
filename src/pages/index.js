@@ -7,4 +7,4 @@ export { default as FAQ } from "./FAQ/FAQ";
 export { default as Product } from "./Product/Product";
 export { default as LoginPage } from "./Account/LoginPage";
 export { default as RegisterPage } from "./Account/RegisterPage";
-export { default as UserAccount } from "./Account/UserAccount/UserAccount";
+export { default as AddProducts } from "./Admin/AddProducts";
