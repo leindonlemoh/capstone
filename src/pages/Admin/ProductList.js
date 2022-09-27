@@ -34,7 +34,7 @@ const ProductList = ({ user }) => {
           <th>Description</th>
         </thead>
         <tbody>
-          <tr>{renderProducts}</tr>
+          {renderProducts}
         </tbody>
       </table>
     </div>
