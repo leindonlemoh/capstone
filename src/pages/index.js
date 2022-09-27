@@ -7,5 +7,4 @@ export { default as Product } from "./Product/Product";
 export { default as LoginPage } from "./LoginPage/LoginPage";
 export { default as RegisterPage } from "./RegisterPage/RegisterPage";
 export { default as AddProducts } from "./Admin/AddProducts";
-export { default as UserAccount } from "./UserAccount/UserAccount";
-export { default as ProtectedRoute } from "./ProtectedRoute/ProtectedRoute";
+export { default as UserAccount } from "./Account/UserAccount/UserAccount";
