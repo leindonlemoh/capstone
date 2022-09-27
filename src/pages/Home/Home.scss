@@ -12,7 +12,7 @@
     .banner-con {
       position: relative;
       .banner-image {
-        filter: brightness(60%);
+        filter: brightness(40%);
       }
       .banner-text {
         position: absolute;
@@ -37,6 +37,8 @@
           height: 60px;
           width: 200px;
           font-size: 20px;
+          font-weight: bolder;
+          border-radius: 30px;
         }
       }
     }
