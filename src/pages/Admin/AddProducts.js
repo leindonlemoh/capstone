@@ -143,7 +143,6 @@ const AddProducts = ({ user }) => {
 
         <div className="form-floating ">
           <textarea
-            placeholder="Description"
             id="product_description"
             className="form-control description-text"
             type="text"
@@ -151,7 +150,7 @@ const AddProducts = ({ user }) => {
             onChange={onInputChange}
             value={product.product_description}
           ></textarea>
-          <label htmlFor="floatingTextarea">Description</label>
+          <label htmlFor="floatingTextarea"></label>
         </div>
 
         {/*  */}
