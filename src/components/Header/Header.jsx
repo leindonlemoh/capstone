@@ -9,12 +9,9 @@ const Header = ({ user }) => {
   const [loggedInUser, setLoggedInUser] = useState({});
 
   let btn = (
-    <Link
-      to="login"
-      className={({ isActive }) => (isActive ? "activeNav" : "")}
-    >
-      Login
-    </Link>
+    <button className="btn btn-link text-dark text-decoration-none">
+    Login
+  </button>
   );
 
   if (user.id) {
@@ -49,9 +46,16 @@ const Header = ({ user }) => {
               <li className="nav__item">About</li>
             </NavLink>
 
-            <li className="nav__item">
-              <div>{btn}</div>
-            </li>
+            <Link
+              to="login"
+              className={({ isActive }) => (isActive ? "activeNav" : "")}
+            >
+              <li className="nav__item">
+              {btn}
+              </li>
+            </Link>
+
+            
 
             <button
               type="button"
