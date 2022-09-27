@@ -13,7 +13,7 @@ import {
   UserAccount,
 } from "./pages";
 import axios from "axios";
-axios.defaults.baseURL = "http://localhost:3001";
+axios.defaults.baseURL = "https://git.heroku.com/making-dough-server.git";
 
 function App() {
   const [loggedInUser, setLoggedInUser] = useState({});
@@ -22,7 +22,10 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Layout user={loggedInUser} />}>
+          <Route
+            path="/"
+            element={<Layout user={loggedInUser} onLogout={setLoggedInUser} />}
+          >
             <Route index element={<Home />} />
             <Route path="shop" element={<Shop />} />
             <Route path="product/:id" element={<Product />} />

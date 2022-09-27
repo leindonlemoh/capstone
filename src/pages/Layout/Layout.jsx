@@ -1,13 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import { Outlet } from "react-router-dom";
 import { Header, Footer } from "../../components";
 import "./Layout.scss";
 
-const Layout = ({ user }) => {
-  const [loggedInUser, setLoggedInUser] = useState({});
+const Layout = ({ onLogout }) => {
   return (
     <>
-      <Header user={loggedInUser} onLogout={setLoggedInUser} />
+      <Header />
       <Outlet />
       <Footer />
     </>
