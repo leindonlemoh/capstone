@@ -37,7 +37,7 @@ const RegisterPage = () => {
       confirm_password: user.confirm_password,
     };
     axios
-      .post("https://git.heroku.com/making-dough-server.git", data)
+      .post("https://making-dough-server.herokuapp.com/users/register", data)
       .then((res) => {
         swal("Success", "Registered Succesfully", "success");
         setUser({

@@ -13,7 +13,7 @@ import {
   UserAccount,
 } from "./pages";
 import axios from "axios";
-axios.defaults.baseURL = "https://git.heroku.com/making-dough-server.git";
+axios.defaults.baseURL = "https://making-dough-server.herokuapp.com/";
 
 function App() {
   const [loggedInUser, setLoggedInUser] = useState({});

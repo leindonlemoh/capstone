@@ -41,7 +41,10 @@ const AddProducts = ({ user }) => {
     }
 
     axios
-      .post("https://git.heroku.com/making-dough-server.git", formData)
+      .post(
+        "https://making-dough-server.herokuapp.com/users/addproducts",
+        formData
+      )
       .then((res) => {
         swal("Success", "New Product Added", "success");
         console.log(res);
