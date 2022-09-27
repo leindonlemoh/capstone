@@ -1,10 +1,7 @@
 import React from "react";
 import "./About.scss";
 
-const About = ({ user }) => {
-  if (!user.is_admin) {
-    return;
-  }
+const About = () => {
   return (
     <div className="about">
       <section className="about__image grid">

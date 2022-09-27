@@ -1,8 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useStateContext } from '../../context/StateContext';
 import './ProductCard.scss';
 
 const ProductCard = () => {
+    const { onAdd } = useStateContext();
   return (
         <div className='product__card'>
             <Link to='/product/id'>
@@ -10,7 +12,7 @@ const ProductCard = () => {
             </Link>
 
             <div className='overlay flex absolute'>
-                <button className='add__to__bag flex' type='button'>
+                <button className='add__to__bag flex' type='button' onClick={() => onAdd}>
                     Add To Bag 
                     <i className='bi bi-plus-lg'></i>
                 </button>
