@@ -10,3 +10,4 @@ export { default as AddProducts } from "./Admin/AddProducts";
 export { default as UserAccount } from "./UserAccount/UserAccount";
 export { default as ProtectedRoute } from "./ProtectedRoute/ProtectedRoute";
 export { default as ProductList } from "./Admin/ProductList";
+export { default as UpdateProduct } from "./Admin/UpdateProduct";
