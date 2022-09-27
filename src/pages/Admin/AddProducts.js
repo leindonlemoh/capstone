@@ -41,7 +41,10 @@ const AddProducts = ({ user }) => {
     }
 
     axios
-      .post("http://localhost:3001/users/addproducts", formData)
+      .post(
+        "https://making-dough-server.herokuapp.com/users/addproducts",
+        formData
+      )
       .then((res) => {
         swal("Success", "New Product Added", "success");
         console.log(res);
@@ -140,7 +143,6 @@ const AddProducts = ({ user }) => {
 
         <div className="form-floating ">
           <textarea
-            placeholder="Description"
             id="product_description"
             className="form-control description-text"
             type="text"
@@ -148,7 +150,7 @@ const AddProducts = ({ user }) => {
             onChange={onInputChange}
             value={product.product_description}
           ></textarea>
-          <label htmlFor="floatingTextarea">Description</label>
+          <label htmlFor="floatingTextarea"></label>
         </div>
 
         {/*  */}

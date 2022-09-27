@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 const RegisterPage = () => {
   const navigate = useNavigate();
-  
+
   const [user, setUser] = useState({
     first_name: "",
     last_name: "",
@@ -37,7 +37,7 @@ const RegisterPage = () => {
       confirm_password: user.confirm_password,
     };
     axios
-      .post("http://localhost:3001/users/register", data)
+      .post("https://making-dough-server.herokuapp.com/users/register", data)
       .then((res) => {
         swal("Success", "Registered Succesfully", "success");
         setUser({
