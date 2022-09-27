@@ -1,29 +1,33 @@
-import React, { useState } from "react";
+import React from "react";
 import { Bag } from "../";
 import { Link, NavLink, Navigate } from "react-router-dom";
 import { useStateContext } from "../../context/StateContext";
 import "./Header.scss";
 
-const Header = ({ user }) => {
+const Header = ({ user, onLogout }) => {
   const { toggleBag, setToggleBag } = useStateContext();
-  const [loggedInUser, setLoggedInUser] = useState({});
 
-  let btn = (
-    <Link
-      to="login"
-      className={({ isActive }) => (isActive ? "activeNav" : "")}
-    >
-      Login
-    </Link>
-  );
+  // let btn = (
+  //   <NavLink to="login">
+  //     <button className="btn btn-link text-dark ">Login</button>
+  //   </NavLink>
+  // );
 
-  if (user.id) {
-    btn = (
-      <button className="btn btn-link text-dark text-decoration-none">
-        Logout
-      </button>
-    );
-  }
+  // if (user.id) {
+  //   btn = (
+  //     <NavLink to="login">
+  //       <button
+  //         className="btn btn-link text-dark text-decoration-none"
+  //         onClick={() => {
+  //           onLogout({});
+  //           <Navigate to="/" replace />;
+  //         }}
+  //       >
+  //         Logout
+  //       </button>
+  //     </NavLink>
+  //   );
+  // }
 
   return (
     <div className="header fixed">
@@ -34,7 +38,7 @@ const Header = ({ user }) => {
           </Link>
         </div>
 
-        <nav user={loggedInUser}>
+        <nav>
           <ul className="nav__list flex">
             <NavLink
               to="shop"
@@ -49,10 +53,12 @@ const Header = ({ user }) => {
               <li className="nav__item">About</li>
             </NavLink>
 
-            <li className="nav__item">
-              <div>{btn}</div>
-            </li>
-
+            <NavLink
+              to="login"
+              className={({ isActive }) => (isActive ? "activeNav" : "")}
+            >
+              <li className="nav__item">Login{/* <div>{btn}</div> */}</li>
+            </NavLink>
             <button
               type="button"
               className="bag__btn"
