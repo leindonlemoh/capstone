@@ -2,8 +2,11 @@ import React, { useState } from "react";
 import "./AddProducts.scss";
 import axios from "axios";
 import swal from "sweetalert";
+import { useNavigate } from "react-router-dom";
 
 const AddProducts = ({ user }) => {
+  const navigate = useNavigate();
+
   const [product, setProduct] = useState({
     product_name: "",
     product_image: "",
@@ -55,7 +58,12 @@ const AddProducts = ({ user }) => {
     return;
   }
   return (
+    <>
+      <div className="flex" style={{ width: 'max-content', height: 'max-content', padding: '.5rem 1rem', fontSize: '2rem', marginTop: '5rem' }}><button onClick={() => navigate('/productlist')}>Product List</button></div>
+
     <div className="Products">
+
+
       <form
         className="addProduct-form"
         onSubmit={onFormSubmit}
@@ -162,6 +170,7 @@ const AddProducts = ({ user }) => {
         />
       </form>
     </div>
+    </>
   );
 };
 
