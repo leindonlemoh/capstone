@@ -19,6 +19,17 @@ const Login = ({ onLogin }) => {
 
   const onFormSubmit = (e) => {
     e.preventDefault();
+
+    if (!user) 
+    onLogin({email:user.email, password:user.password})
+    navigate('/account')
+    
+
+    if (!user.is_admin)
+    onLogin({email:user.email, password:user.password})
+    navigate('/addproduct')
+    
+
     const data = {
       email: user.email,
       password: user.password,
@@ -81,7 +92,7 @@ const Login = ({ onLogin }) => {
           <p className="create">
             Haven't been here before?
             <br />
-            Create Your Account
+            <button onClick={() => navigate('/register')}>Create Your Account</button>
           </p>
         </div>
       </form>

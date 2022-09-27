@@ -2,8 +2,11 @@ import React, { useState } from "react";
 import "./Register.scss";
 import axios from "axios";
 import swal from "sweetalert";
+import { useNavigate } from "react-router-dom";
 
 const RegisterPage = () => {
+  const navigate = useNavigate();
+  
   const [user, setUser] = useState({
     first_name: "",
     last_name: "",
@@ -182,7 +185,7 @@ const RegisterPage = () => {
           <p className="create">
             I have an account.
             <br />
-            <a href="#">Go to Log-in</a>
+            <button onClick={() => navigate(-1)}>Go to Log-in</button>
           </p>
         </div>
       </form>
