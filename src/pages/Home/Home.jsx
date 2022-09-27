@@ -28,7 +28,6 @@ const Home = () => {
             </h3>
             <p>
               We only use the finest ingredients, and we favour organic,
-              <br />
               sustainable and local procedure. <br />
               The result is heartfelt goodnesswith quality baked in.
             </p>
