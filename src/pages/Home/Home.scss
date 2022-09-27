@@ -30,6 +30,8 @@
           height: 60px;
           width: 200px;
           font-size: 20px;
+          border: 2px solid white;
+          border-radius: 50px;
         }
       }
     }
@@ -41,24 +43,46 @@
     display: flex;
     flex-direction: column;
     margin-top: 200px;
-
     padding: 50px;
-
-
-    .text-offer {
-      color: var(--fnt-clr);
+    .offer-box {
       border: 5px solid #60370e;
-      h4 {
+      padding: 10px;
+      .text-offer {
+        color: var(--fnt-clr);
+
+        h4 {
+          margin-top: 50px;
+          font-size: 30px;
+          font-weight: bolder;
+        }
+        p {
+          margin-top: 30px;
+          font-size: 20px;
+        }
+      }
+      .products {
         margin-top: 50px;
-        font-size: 30px;
+        .bread {
+          object-fit: contain;
+          width: 300px;
+          height: 300px;
+        }
+        .pastry {
+          object-fit: cover;
+          width: 200px;
+          height: 200px;
+        }
+        .sanwhich {
+          object-fit: cover;
+          width: 200px;
+          height: 200px;
+        }
+        .utensil {
+          object-fit: cover;
+          width: 200px;
+          height: 200px;
+        }
       }
-      p {
-        margin-top: 30px;
-        font-size: 20px;
-      }
-    }
-    .products {
-      margin-top: 50px;
     }
   }
   //
@@ -142,6 +166,9 @@
 
     .hw-contact {
       text-align: center;
+      h3 {
+        font-weight: bolder;
+      }
     }
     .ws-images {
       display: flex;
