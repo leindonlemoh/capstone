@@ -22,17 +22,26 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Layout />}>
+          <Route path="/" element={<Layout user={loggedInUser} />}>
             <Route index element={<Home />} />
             <Route path="shop" element={<Shop />} />
             <Route path="product/:id" element={<Product />} />
-            <Route path="about" element={<About user={loggedInUser} />} />
-            <Route exact path="login" element={<LoginPage onLogin={setLoggedInUser} />} />
+            <Route path="about" element={<About />} />
+            <Route
+              exact
+              path="login"
+              element={<LoginPage onLogin={setLoggedInUser} />}
+            />
             <Route exact path="register" element={<RegisterPage />} />
-            <Route path="addproduct" element={<AddProducts user={loggedInUser} />} />
-            <Route path="account" element={<UserAccount user={loggedInUser} />} />
+            <Route
+              path="addproduct"
+              element={<AddProducts user={loggedInUser} />}
+            />
+            <Route
+              path="account"
+              element={<UserAccount user={loggedInUser} />}
+            />
             <Route path="faq" element={<FAQ />} />
-
           </Route>
         </Routes>
       </BrowserRouter>
