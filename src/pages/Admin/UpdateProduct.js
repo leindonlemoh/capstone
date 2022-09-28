@@ -1,59 +1,17 @@
-import React, { useState } from "react";
-import "./AddProducts.scss";
+import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 import axios from "axios";
-import swal from "sweetalert";
-
-const AddProducts = ({ user }) => {
-  const [product, setProduct] = useState({
+const UpdateProduct = () => {
+  const [product, setProducts] = useState({
     product_name: "",
-    product_image: "",
     product_price: "",
-    category_id: "",
+    product_image: "",
     product_description: "",
   });
 
-  const onInputChange = (e) => {
-    let value = e.target.value;
+  const onFormSubmit = () => {};
+  const onInputChange = () => {};
 
-    if (e.target.name === "product_image") {
-      value = e.target.files[0];
-    }
-
-    setProduct({
-      ...product,
-      [e.target.name]: value,
-    });
-  };
-
-  const onFormSubmit = (e) => {
-    e.preventDefault();
-    // const data = {
-    //   product_name: product.product_name,
-    //   product_image: product.product_image,
-    //   product_price: product.product_price,
-    //   category_id: product.category_id,
-    //   product_description: product.product_description,
-    // };
-
-    const formData = new FormData();
-    for (let field in product) {
-      formData.append(field, product[field]);
-    }
-
-    axios
-      .post(
-        "https://making-dough-server.herokuapp.com/users/addproducts",
-        formData
-      )
-      .then((res) => {
-        swal("Success", "New Product Added", "success");
-        console.log(res);
-      });
-  };
-
-  if (!user.is_admin) {
-    return;
-  }
   return (
     <div className="Products">
       <form
@@ -109,36 +67,6 @@ const AddProducts = ({ user }) => {
           </label>
         </div>
 
-        {/* CATEGORY */}
-
-        <div className="dropdown-center category">
-          {/* <select
-            name="category_id"
-            className="category_id"
-            id="category_id"
-            onChange={onInputChange}
-            value={product.category_id}
-          >
-            <option value="1">Bread</option>
-            <option value="2">Pastry</option>
-            <option value="3">Sandwhich</option>
-          </select> */}
-
-          <select
-            class="form-select form-select-lg mb-3 category_id"
-            aria-label=".form-select-lg example"
-            name="category_id"
-            id="category_id"
-            onChange={onInputChange}
-            value={product.category_id}
-          >
-            <option selected>Select Category</option>
-            <option value="1">Bread</option>
-            <option value="2">Pastry</option>
-            <option value="3">Sandwhich</option>
-          </select>
-        </div>
-
         {/* DESCRIPTION */}
 
         <div className="form-floating ">
@@ -165,4 +93,4 @@ const AddProducts = ({ user }) => {
   );
 };
 
-export default AddProducts;
+export default UpdateProduct;

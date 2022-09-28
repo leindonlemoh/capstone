@@ -39,62 +39,56 @@ const Home = () => {
         </div>
       </section>
       <section className="offer">
-        <div className="text-offer">
-          <h4>What We Offer?</h4>
-          <p>
-            It started by simple sharing handemade baked goods with family,
-            friends, neighbors just over <br />
-            the fence. Today we are baking and delivering baked goods to our
-            fellow humans out there.{" "}
-            <button
-              onClick={() => {
-                navigate("/account/login");
-              }}
-            >
-              {" "}
-              Login
-            </button>
-          </p>
-        </div>
-        <div className="products container">
-          {/* <div className="row">
-            <div className="col">
-              <img
-                className="bread"
-                src={Bread}
-                alt="Bread"
-                width="500"
-                height="600"
-              />
+        <div className="offer-box">
+          <div className="text-offer">
+            <h4>What We Offer?</h4>
+            <p>
+              It started by simple sharing handemade baked goods with family,
+              friends, neighbors just over <br />
+              the fence. Today we are baking and delivering baked goods to our
+              fellow humans out there.
+            </p>
+          </div>
+          <div className="products container">
+            <div className="row">
+              <div className="col">
+                <img
+                  className="bread"
+                  src={Bread}
+                  alt="Bread"
+                  width="500"
+                  height="600"
+                />
+              </div>
+              <div className="col">
+                <img
+                  className="pastry"
+                  src={Pastry}
+                  alt="slice of cake"
+                  width="500"
+                  height="600"
+                />
+              </div>
+              <div className="col">
+                <img
+                  className="sanwhich"
+                  src={Sandwhich}
+                  alt="Sandwhich"
+                  width="500"
+                  height="600"
+                />
+              </div>
+              <div className="col">
+                <img
+                  className="utensil"
+                  src={Bake}
+                  alt="Girl in a jacket"
+                  width="500"
+                  height="600"
+                />
+              </div>
             </div>
-            <div className="col">
-              <img
-                className="pastry"
-                src={Pastry}
-                alt="slice of cake"
-                width="500"
-                height="600"
-              />
-            </div>
-            <div className="col">
-              <img
-                className="Sanwhich"
-                src={Sandwhich}
-                alt="Sandwhich"
-                width="500"
-                height="600"
-              />
-            </div>
-            <div className="col">
-              <img
-                className=""
-                src={Bake}
-                alt="Girl in a jacket"
-                width="500"
-                height="600"
-              />
-            </div>
-          </div> */}
+          </div>
         </div>
       </section>
       <section className="how">
@@ -134,7 +128,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      
+
       <section className="home-workshop">
         <div className="hw-content">
           <div className="hw-contact">
@@ -151,7 +145,6 @@ const Home = () => {
               <p>Monday, 10AM To 11 AM</p>
             </div>
             <div className="center-image">
-              
               <div className="image">
                 <img src={Right} alt="baking" className="right-image" />
                 <p>Wednesday, 1PM To 2 PM</p>
@@ -161,8 +154,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-       
-        
     </div>
   );
 };
