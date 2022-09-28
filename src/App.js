@@ -12,7 +12,6 @@ import {
   AddProducts,
   UserAccount,
   ProductList,
-  UpdateProduct,
 } from "./pages";
 import axios from "axios";
 axios.defaults.baseURL = "https://making-dough-server.herokuapp.com/";
@@ -42,13 +41,10 @@ function App() {
               path="addproduct"
               element={<AddProducts user={loggedInUser} />}
             />
-            <Route path="productlist">
-              <Route
-                index
-                element={<ProductList user={loggedInUser} />}
-              ></Route>
-              <Route path=":id" element={<UpdateProduct />}></Route>
-            </Route>
+            <Route
+              path="productlist"
+              element={<ProductList user={loggedInUser} />}
+            />
             <Route
               path="account"
               element={<UserAccount user={loggedInUser} />}
