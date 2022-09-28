@@ -15,12 +15,22 @@ const ProductList = ({ user }) => {
   const renderProducts = productlist.map((products) => {
     return (
       <tr key={products.product_id}>
-        <td>{products.product_name}</td>
-        <td>{products.product_price}</td>
-        <td>{products.product_image}</td>
-        <td>{products.product_description}</td>
+        <td className="prod-name">{products.product_name}</td>
+        <td className="prod-price">{products.product_price}</td>
+        <td className="prod-image">{products.product_image}</td>
+        <td className="prod-desc">{products.product_description}</td>
+        <td>
+          <Link
+            className="btn btn-primary"
+            to={`/users/${products.product_id}`}
+          >
+            Edit
+          </Link>
+        </td>
+        <td>Delete</td>
       </tr>
     );
+
   });
 
   return (
