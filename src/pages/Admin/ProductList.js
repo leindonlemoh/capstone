@@ -2,8 +2,11 @@ import React, { useState, useEffect } from "react";
 import "./ProductList.scss";
 import axios from "axios";
 import swal from "sweetalert";
+import { Link, useNavigate } from 'react-router-dom';
 
 const ProductList = ({ user }) => {
+  const navigate = useNavigate();
+
   const [productlist, setProductList] = useState([]);
 
   useEffect(() => {
@@ -21,8 +24,8 @@ const ProductList = ({ user }) => {
         <td className="prod-desc">{products.product_description}</td>
         <td>
           <Link
-            className="btn btn-primary"
             to={`/users/${products.product_id}`}
+            className="btn btn-primary"
           >
             Edit
           </Link>
@@ -34,6 +37,9 @@ const ProductList = ({ user }) => {
   });
 
   return (
+    <>
+   <div className="flex" style={{ width: 'max-content', height: 'max-content', padding: '.5rem 1rem', fontSize: '2rem', marginTop: '5rem' }}><button onClick={() => navigate(-1)}>Add Products</button></div>
+
     <div className="container mt-5 list">
       <h4>Product List</h4>
       <table className="table">
@@ -48,6 +54,7 @@ const ProductList = ({ user }) => {
         </tbody>
       </table>
     </div>
+    </>
   );
 };
 
