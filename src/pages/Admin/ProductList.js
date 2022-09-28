@@ -37,7 +37,7 @@ const ProductList = ({ user }) => {
 
   return (
     <div className="container mt-5 list">
-      <h4>Product List 2022</h4>
+      <h4>Product List</h4>
       <table className="table">
         <thead>
           <th className="name-th">Product Name</th>
