@@ -47,9 +47,7 @@ const ProductList = ({ user }) => {
           <th className="desc-th">Edit</th>
           <th className="desc-th">Delete</th>
         </thead>
-        <tbody>
-          <tr>{renderProducts}</tr>
-        </tbody>
+        <tbody>{renderProducts}</tbody>
       </table>
     </div>
   );
