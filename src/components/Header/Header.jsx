@@ -53,26 +53,12 @@ const Header = ({ user, onLogout }) => {
               <li className="nav__item">About</li>
             </NavLink>
 
-<<<<<<< HEAD
-            <Link
-              to="login"
-              className={({ isActive }) => (isActive ? "activeNav" : "")}
-            >
-              <li className="nav__item">
-              {btn}
-              </li>
-            </Link>
-
-            
-
-=======
             <NavLink
               to="login"
               className={({ isActive }) => (isActive ? "activeNav" : "")}
             >
               <li className="nav__item">Login{/* <div>{btn}</div> */}</li>
             </NavLink>
->>>>>>> origin/master
             <button
               type="button"
               className="bag__btn"
