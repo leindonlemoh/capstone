@@ -112,18 +112,6 @@ const AddProducts = ({ user }) => {
         {/* CATEGORY */}
 
         <div className="dropdown-center category">
-          {/* <select
-            name="category_id"
-            className="category_id"
-            id="category_id"
-            onChange={onInputChange}
-            value={product.category_id}
-          >
-            <option value="1">Bread</option>
-            <option value="2">Pastry</option>
-            <option value="3">Sandwhich</option>
-          </select> */}
-
           <select
             class="form-select form-select-lg mb-3 category_id"
             aria-label=".form-select-lg example"

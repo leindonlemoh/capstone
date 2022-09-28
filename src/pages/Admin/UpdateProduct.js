@@ -19,7 +19,7 @@ const UpdateProduct = () => {
         onSubmit={onFormSubmit}
         encType="multipart/form-data"
       >
-        <h4>Add Products</h4>
+        <h4>Update Products</h4>
 
         {/* NAME */}
 
