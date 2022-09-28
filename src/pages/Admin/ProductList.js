@@ -24,7 +24,7 @@ const ProductList = ({ user }) => {
         <td className="prod-desc">{products.product_description}</td>
         <td>
           <Link
-            to={`/users/${products.product_id}`}
+            to={'/users/:id'}
             className="btn btn-primary"
           >
             Edit
