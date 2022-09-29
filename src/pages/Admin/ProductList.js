@@ -20,17 +20,18 @@ const ProductList = ({ user }) => {
       <tr key={products.product_id}>
         <td className="prod-name">{products.product_name}</td>
         <td className="prod-price">{products.product_price}</td>
-        <td className="prod-image">{products.product_image}</td>
         <td className="prod-desc">{products.product_description}</td>
         <td>
-          <Link
-            to={'/users/:id'}
-            className="btn btn-primary"
-          >
+          <Link to={"/users/:id"} className="btn btn-primary">
             Edit
           </Link>
         </td>
-        <td>Delete</td>
+        <td>
+          {" "}
+          <Link to={"/users/:id"} className="btn btn-danger">
+            Delete
+          </Link>
+        </td>
       </tr>
     );
   });
@@ -54,10 +55,11 @@ const ProductList = ({ user }) => {
         <h4>Product List</h4>
         <table className="table">
           <thead>
-            <th>Product Name</th>
+            <th> Product Name</th>
             <th>Price</th>
-            <th>Image</th>
             <th>Description</th>
+            <th>Edit</th>
+            <th>Delete</th>
           </thead>
           <tbody>{renderProducts}</tbody>
         </table>
