@@ -43,7 +43,7 @@ function App() {
               element={<AddProducts user={loggedInUser} />}
             />
 
-            <Route path="productlist">
+            <Route path="/users">
               <Route
                 index
                 element={<ProductList user={loggedInUser} />}

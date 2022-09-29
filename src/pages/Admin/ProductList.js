@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from "react";
 import "./ProductList.scss";
 import axios from "axios";
-import { Link } from "react-router-dom";
 import swal from "sweetalert";
+import { Link, useNavigate } from "react-router-dom";
 
 const ProductList = ({ user }) => {
+  const navigate = useNavigate();
+
   const [productlist, setProductList] = useState([]);
 
   useEffect(() => {
-    axios
-      .get("https://making-dough-server.herokuapp.com/users/productlist")
-      .then((res) => {
-        setProductList(res.data);
-      });
+    axios.get("/users/productlist").then((res) => {
+      setProductList(res.data);
+    });
   }, []);
 
   const renderProducts = productlist.map((products) => {
@@ -24,8 +24,8 @@ const ProductList = ({ user }) => {
         <td className="prod-desc">{products.product_description}</td>
         <td>
           <Link
-            className="btn btn-primary"
             to={`/users/${products.product_id}`}
+            className="btn btn-primary"
           >
             Edit
           </Link>
@@ -36,20 +36,33 @@ const ProductList = ({ user }) => {
   });
 
   return (
-    <div className="container mt-5 list">
-      <h4>Product List</h4>
-      <table className="table">
-        <thead>
-          <th className="name-th">Product Name</th>
-          <th className="price-th">Price</th>
-          <th className="image-th">Image</th>
-          <th className="desc-th">Description</th>
-          <th className="desc-th">Edit</th>
-          <th className="desc-th">Delete</th>
-        </thead>
-        <tbody>{renderProducts}</tbody>
-      </table>
-    </div>
+    <>
+      <div
+        className="flex"
+        style={{
+          width: "max-content",
+          height: "max-content",
+          padding: ".5rem 1rem",
+          fontSize: "2rem",
+          marginTop: "5rem",
+        }}
+      >
+        <button onClick={() => navigate(-1)}>Add Products</button>
+      </div>
+
+      <div className="container mt-5 list">
+        <h4>Product List</h4>
+        <table className="table">
+          <thead>
+            <th>Product Name</th>
+            <th>Price</th>
+            <th>Image</th>
+            <th>Description</th>
+          </thead>
+          <tbody>{renderProducts}</tbody>
+        </table>
+      </div>
+    </>
   );
 };
 
