@@ -42,13 +42,15 @@ function App() {
               path="addproduct"
               element={<AddProducts user={loggedInUser} />}
             />
-            <Route path="productlist">
+
+            <Route path="/users">
               <Route
                 index
                 element={<ProductList user={loggedInUser} />}
               ></Route>
               <Route path=":id" element={<UpdateProduct />}></Route>
             </Route>
+
             <Route
               path="account"
               element={<UserAccount user={loggedInUser} />}

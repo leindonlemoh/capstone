@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./ProductList.scss";
 import axios from "axios";
 import swal from "sweetalert";
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from "react-router-dom";
 
 const ProductList = ({ user }) => {
   const navigate = useNavigate();
@@ -33,27 +33,35 @@ const ProductList = ({ user }) => {
         <td>Delete</td>
       </tr>
     );
-
   });
 
   return (
     <>
-   <div className="flex" style={{ width: 'max-content', height: 'max-content', padding: '.5rem 1rem', fontSize: '2rem', marginTop: '5rem' }}><button onClick={() => navigate(-1)}>Add Products</button></div>
+      <div
+        className="flex"
+        style={{
+          width: "max-content",
+          height: "max-content",
+          padding: ".5rem 1rem",
+          fontSize: "2rem",
+          marginTop: "5rem",
+        }}
+      >
+        <button onClick={() => navigate(-1)}>Add Products</button>
+      </div>
 
-    <div className="container mt-5 list">
-      <h4>Product List</h4>
-      <table className="table">
-        <thead>
-          <th>Product Name</th>
-          <th>Price</th>
-          <th>Image</th>
-          <th>Description</th>
-        </thead>
-        <tbody>
-          {renderProducts}
-        </tbody>
-      </table>
-    </div>
+      <div className="container mt-5 list">
+        <h4>Product List</h4>
+        <table className="table">
+          <thead>
+            <th>Product Name</th>
+            <th>Price</th>
+            <th>Image</th>
+            <th>Description</th>
+          </thead>
+          <tbody>{renderProducts}</tbody>
+        </table>
+      </div>
     </>
   );
 };
