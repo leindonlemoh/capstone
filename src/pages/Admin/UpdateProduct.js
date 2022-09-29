@@ -1,16 +1,46 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import UserAccount from "../UserAccount/UserAccount";
+import swal from "sweetalert";
+
 const UpdateProduct = () => {
-  const [product, setProducts] = useState({
+  const { id } = useParams();
+  const [products, setProducts] = useState({
     product_name: "",
     product_price: "",
     product_image: "",
     product_description: "",
   });
 
-  const onFormSubmit = () => {};
-  const onInputChange = () => {};
+  useEffect(() => {
+    axios.get(`/users/${id}`).then((res) => {
+      console.log(res.data[0]);
+      setProducts({
+        product_name: res.data[0].product_name,
+        product_price: res.data[0].product_price,
+        product_image: res.data[0].product_image,
+        product_description: res.data[0].product_description,
+      });
+    });
+  }, [id]);
+
+  const onInputChange = (e) => {
+    setProducts({ ...products, [e.target.name]: e.target.value });
+  };
+
+  const onFormSubmit = (e) => {
+    e.preventDefault();
+    const data = {
+      product_name: products.product_name,
+      product_price: products.product_price,
+      product_image: products.product_image,
+      product_description: products.product_description,
+    };
+    axios.post(`/users/${id}`, data).then((res) => {
+      swal("Updated!", res.data.message, "success");
+    });
+  };
 
   return (
     <div className="Products">
@@ -19,7 +49,7 @@ const UpdateProduct = () => {
         onSubmit={onFormSubmit}
         encType="multipart/form-data"
       >
-        <h4>Add Products</h4>
+        <h4>Update Products</h4>
 
         {/* NAME */}
 
@@ -31,7 +61,7 @@ const UpdateProduct = () => {
             id="product_name"
             placeholder="Product Name"
             onChange={onInputChange}
-            value={product.product_name}
+            value={products.product_name}
           />
           <label htmlFor="floatingInput">Product Name</label>
         </div>
@@ -46,7 +76,7 @@ const UpdateProduct = () => {
             id="product_price"
             placeholder="Product Price"
             onChange={onInputChange}
-            value={product.product_price}
+            value={products.product_price}
           />
           <label htmlFor="floatingInput">Product Price</label>
           {/* <span className="text-danger"> {user.error_list.last_name}</span> */}
@@ -76,7 +106,7 @@ const UpdateProduct = () => {
             type="text"
             name="product_description"
             onChange={onInputChange}
-            value={product.product_description}
+            value={products.product_description}
           ></textarea>
           <label htmlFor="floatingTextarea"></label>
         </div>

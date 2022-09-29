@@ -20,11 +20,11 @@ const Login = ({ onLogin }) => {
   const onFormSubmit = (e) => {
     e.preventDefault();
 
-    if (!user) onLogin({ email: user.email, password: user.password });
-    navigate("/account");
+    
 
-    if (!user.is_admin) onLogin({ email: user.email, password: user.password });
-    navigate("/addproduct");
+    if (!user.is_admin) {navigate('/addproduct')}
+    else navigate('/shop');
+
 
     const data = {
       email: user.email,

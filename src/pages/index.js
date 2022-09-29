@@ -11,3 +11,4 @@ export { default as UserAccount } from "./UserAccount/UserAccount";
 export { default as ProtectedRoute } from "./ProtectedRoute/ProtectedRoute";
 export { default as ProductList } from "./Admin/ProductList";
 export { default as UpdateProduct } from "./Admin/UpdateProduct";
+export { default as ProductLists } from "./ProductLists";

@@ -4,21 +4,10 @@
   overflow-y: scroll;
   padding-top: 50px;
 }
-.prod-name {
-  width: 50px;
-  border: 2px solid white;
+table {
+  table-layout: fixed;
+  width: 100%;
 }
-.prod-price {
-  width: 30px;
-}
-.prod-image {
-  width: 30px;
-  border: 1px solid black;
-}
-.prod-desc {
-  width: 50px;
-}
-.name-th {
-  width: 1000px;
-  border: 2px solid black;
+th {
+  width: 20%;
 }
