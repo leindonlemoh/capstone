@@ -20,9 +20,10 @@ const Login = ({ onLogin }) => {
   const onFormSubmit = (e) => {
     e.preventDefault();
 
-    navigate('/shop');
+    
 
-    if (!user.is_admin) navigate('/addproduct');
+    if (!user.is_admin) {navigate('/addproduct')}
+    else navigate('/shop');
 
 
     const data = {
