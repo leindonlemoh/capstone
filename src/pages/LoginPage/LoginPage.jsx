@@ -20,11 +20,9 @@ const Login = ({ onLogin }) => {
   const onFormSubmit = (e) => {
     e.preventDefault();
 
-    
-
-    if (!user.is_admin) {navigate('/addproduct')}
-    else navigate('/shop');
-
+    if (!user.is_admin) {
+      navigate("/addproduct");
+    } else navigate("/shop");
 
     const data = {
       email: user.email,
@@ -62,6 +60,7 @@ const Login = ({ onLogin }) => {
             onChange={onInputChange}
             value={user.email}
           />
+          <label htmlFor="floatingInput">Email</label>
         </div>
         {/* password */}
         <div className="form-floating mb-3 ">
@@ -74,6 +73,7 @@ const Login = ({ onLogin }) => {
             onChange={onInputChange}
             value={user.password}
           />
+          <label htmlFor="floatingInput">Password</label>
         </div>
         {/* button  */}
         <div className="input-group mb-3">
