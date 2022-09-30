@@ -2,24 +2,27 @@ import React from "react";
 import "./Product.scss";
 import { useStateContext } from "../../context/StateContext";
 
-const Product = () => {
+const Product = (props) => {
+
     const { incQty, decQty, qty, onAdd} = useStateContext();
+
+
 
     return (
         <div className='product'>
             <div className='product__container grid'>
+                
                 <div className='image__container grid'>
-                    <img src='/sample1.jpg' alt='sample' />
+                    <img src={props.product_image} alt={props.product_name} />
                 </div>
 
                 <div className='info__container flex'>
                     <div>
-                        <div className='name'>Product Name</div>
-                        <div className='price'>Price</div>
-                        <div className='category'>Category</div>
+                        <div className='name'>{props.product_name}</div>
+                        <div className='price'>{props.product_price}</div>
+                        <div className='category'>{props.product_category}</div>
                         <div className='description'>
-                            Lorem ipsum dolor sit amet.Lorem ipsum dolor sit
-                            amet consectetur adipisicing elit. Dolores!
+                            {props.product_description}
                         </div>
                     </div>
 
@@ -49,20 +52,6 @@ const Product = () => {
                             Add To Bag
                             <i className='bi bi-plus-lg'></i>
                         </button>
-                    </div>
-
-                    <div>
-                        <ul className='other__info'>
-                            <li className='info__item flex'>
-                                Ingredients <i className='bi bi-plus-lg'></i>
-                            </li>
-                            <li className='info__item flex'>
-                                Allergen <i className='bi bi-plus-lg'></i>
-                            </li>
-                            <li className='info__item flex'>
-                                Origin <i className='bi bi-plus-lg'></i>
-                            </li>
-                        </ul>
                     </div>
                 </div>
             </div>
