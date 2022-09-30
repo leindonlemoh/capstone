@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./ProductList.scss";
 import axios from "axios";
-import swal from "sweetalert";
+
 import { Link, useNavigate } from "react-router-dom";
 
 const ProductList = ({ user }) => {
@@ -28,7 +28,7 @@ const ProductList = ({ user }) => {
         </td>
         <td>
           {" "}
-          <Link to={"/users/:id"} className="btn btn-danger">
+          <Link to={""} className="btn btn-danger">
             Delete
           </Link>
         </td>

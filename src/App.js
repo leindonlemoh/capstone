@@ -30,7 +30,7 @@ function App() {
           >
             <Route index element={<Home />} />
             <Route path="shop" element={<Shop />} />
-            <Route path="product/:id" element={<Product />} />
+            <Route path="/shop/:product_id" element={<Product />} />
             <Route path="about" element={<About />} />
             <Route
               exact

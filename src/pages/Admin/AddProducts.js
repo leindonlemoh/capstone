@@ -57,6 +57,7 @@ const AddProducts = ({ user }) => {
   if (!user.is_admin) {
     return;
   }
+
   return (
     <>
       <div
@@ -82,13 +83,12 @@ const AddProducts = ({ user }) => {
 
           {/* NAME */}
 
-          <div className="form-floating mb-3 ">
+          <div className=" mb-3 ">
             <input
               type="text"
               className="product-name"
               name="product_name"
               id="product_name"
-              placeholder="Product Name"
               onChange={onInputChange}
               value={product.product_name}
             />
@@ -97,13 +97,12 @@ const AddProducts = ({ user }) => {
 
           {/* PRICE */}
 
-          <div className="form-floating mb-3">
+          <div className=" mb-3">
             <input
               className="price"
               type="number"
               name="product_price"
               id="product_price"
-              placeholder="Product Price"
               onChange={onInputChange}
               value={product.product_price}
             />
@@ -146,7 +145,7 @@ const AddProducts = ({ user }) => {
 
           {/* DESCRIPTION */}
 
-          <div className="form-floating ">
+          <div className=" ">
             <textarea
               id="product_description"
               className="form-control description-text"
@@ -155,7 +154,7 @@ const AddProducts = ({ user }) => {
               onChange={onInputChange}
               value={product.product_description}
             ></textarea>
-            <label htmlFor="floatingTextarea"></label>
+            <label htmlFor="floatingTextarea">Description</label>
           </div>
 
           {/*  */}
