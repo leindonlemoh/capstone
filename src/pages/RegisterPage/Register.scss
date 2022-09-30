@@ -104,3 +104,14 @@ label {
 
   font-size: 1.7rem;
 }
+
+.create {
+  align-items: center;
+      flex-direction: column;
+      text-align: center;
+      display: flex;
+
+      button {
+        width: max-content;
+      }
+}
