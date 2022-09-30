@@ -43,7 +43,7 @@ const Shop = () => {
       product_image: "/ps-4.jpg",
     },
     {
-      product_id: 3,
+      product_id: 5,
       product_name: "Classic Cheese Ensaymada",
       product_price: "Php 1700",
       product_category: "Pastry",
@@ -53,7 +53,7 @@ const Shop = () => {
     },
 
     {
-      product_id: 3,
+      product_id: 7,
       product_name: "Focaccia",
       product_price: "Php 1700",
       product_category: "Bread",
@@ -62,7 +62,7 @@ const Shop = () => {
       product_image: "/b-2.png",
     },
     {
-      product_id: 3,
+      product_id: 8,
       product_name: "Challah",
       product_price: "Php 1700",
       product_category: "Bread",
@@ -71,7 +71,7 @@ const Shop = () => {
       product_image: "/b-3.png",
     },
     {
-      product_id: 3,
+      product_id: 9,
       product_name: "Breadsticks",
       product_price: "Php 1700",
       product_category: "Bread",
@@ -80,7 +80,7 @@ const Shop = () => {
       product_image: "/b-4.png",
     },
     {
-      product_id: 3,
+      product_id: 10,
       product_name: "BananaBread",
       product_price: "Php 1700",
       product_category: "Bread",
