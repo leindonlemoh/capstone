@@ -3,12 +3,12 @@ import { Link } from 'react-router-dom';
 import { useStateContext } from '../../context/StateContext';
 import './ProductCard.scss';
 
-const ProductCard = () => {
+const ProductCard = ({ product }) => {
     const { onAdd } = useStateContext();
   return (
         <div className='product__card'>
-            <Link to='/product/id'>
-                <img src='sample1.jpg' alt='sample' style={{width: '100%', opacity: '.94'}} />
+            <Link to={`/shop/${product.product_id}`}>
+                <img src={product.product_image} alt={product.product_name} style={{width: '100%', opacity: '.94'}} />
             </Link>
 
             <div className='overlay flex absolute'>
@@ -20,10 +20,10 @@ const ProductCard = () => {
 
             <div className='product__details flex'>
                 <div className='flex' style={{width: '100%', justifyContent: 'space-between'}}>
-                    <span className='name'>Product Name</span>
-                    <div className='category'>Category</div>
+                    <span className='name'>{product.product_name}</span>
+                    <div className='category'>{product.product_category}</div>
                 </div>
-                <span className='price'>Product Price</span>
+                <span className='price'>{product.product_price}</span>
             </div>
         </div>
   );
