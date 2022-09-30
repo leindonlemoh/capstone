@@ -1,6 +1,6 @@
 :root {
-  --fnt-clr: rgb(86, 58, 47);
-  --bg-clr: #c2bcb2;
+  --fnt-clr: rgb(67, 53, 36);
+  --bg-clr: #e0dbd1;
   --qty-clr: rgb(254, 13, 73);
   
   --product-fnt: 'General Sans', sans-serif;
@@ -17,10 +17,20 @@
   width: 0;
 }
 
+
 a {
   color: inherit;
 
   text-decoration: none;
+}
+
+a:hover {
+  color: inherit !important;
+}
+
+
+input[type="submit"]:hover {
+  background-color: var(--fnt-clr) !important;
 }
 
 ul {list-style: none;}

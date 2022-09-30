@@ -1,9 +1,95 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
 import { ProductCard } from '../../components';
 import './Shop.scss';
 
 const Shop = () => {
+
+  const products = [
+    {
+      product_id: 1,
+      product_name: "Dorayaki",
+      product_price: "Php 1700",
+      product_category: "Pastry",
+      product_description: "A type of Japanese confection. It consists of two small pancake -like patties made from castella wrapped around a filling of sweet azuki bean paste.",
+      product_image: "/ps-1.jpg",
+    },
+
+    {
+      product_id: 2,
+      product_name: "Raspberry Chocolate Croissants",
+      product_price: "Php 1700",
+      product_category: "Pastry",
+      product_description: "Classic, flaky French pastry with a sweet raspberry filling and a strip of dark chocolate in the center.",
+      product_image: "/ps-2.jpg",
+    },
+
+    {
+      product_id: 3,
+      product_name: "Apple Turnovers",
+      product_price: "Php 1700",
+      product_category: "Pastry",
+      product_description: "Homemade Apple Turnovers with a filling that tastes like Apple Pie in flaky puff pastry dough.",
+      product_image: "/ps-3.jpg",
+    },
+    {
+      product_id: 4,
+      product_name: "Ube Cheese Pandesal",
+      product_price: "Php 1700",
+      product_category: "Pastry",
+      product_description: "Ube Pandesal with Cheese are soft, fluffy, and loaded with purple yam flavor. These Filipino bread rolls are delicious for breakfast or snack.",
+      product_image: "/ps-4.jpg",
+    },
+    {
+      product_id: 5,
+      product_name: "Classic Cheese Ensaymada",
+      product_price: "Php 1700",
+      product_category: "Pastry",
+      product_description: "Ensaymada, soft fluffy rolls smothered with whipped butter and topped with lots of grated cheese.",
+      product_image: "/ps-5.jpg",
+    },
+    {
+      product_id: 6,
+      product_name: "Whole Wheat",
+      product_price: "Php 1700",
+      product_category: "Bread",
+      product_description: "Speaking of healthy breads, whole wheat, which is one of a range of whole grain breads, is one of the very best breads for your body. Made from flour that uses the entire grain, including the bran and germ, whole wheat offers more fiber, protein, and vitamins than white bread. It also boasts a richer flavor and aroma. 150",
+      product_image: "/b-1.png",
+    },
+    {
+      product_id: 7,
+      product_name: "Focaccia",
+      product_price: "Php 1700",
+      product_category: "Bread",
+      product_description: "Another bread originating from Italy, focaccia is a flat, dimpled yeast bread resembling pizza dough that's baked at high temperatures in sheet pans. Often topped with olive oil, rosemary and coarse salt, focaccia’s exact origins are unknown, though it might date back to Ancient Rome. Focaccia’s name is derived from the Latin panis focacius, which means fireplace bread. Modern varieties include savory toppings like olives, tomatoes, and mushrooms.",
+      product_image: "/b-2.png",
+    },
+    {
+      product_id: 8,
+      product_name: "Challah",
+      product_price: "Php 1700",
+      product_category: "Bread",
+      product_description: "Made with eggs and most often braided, is integral to the Jewish faith. Served on the Sabbath and holidays, it was originally called berches before the word challah was adopted in the Middle Ages. The bread continues to carry rich meaning, from the poppy and sesame seeds sprinkled on top that symbolize manna from God, to the plaited shape, which represents love.",
+      product_image: "/b-3.png",
+    },
+    {
+      product_id: 9,
+      product_name: "Breadsticks",
+      product_price: "Php 1700",
+      product_category: "Bread",
+      product_description: "Would it really be an Italian meal without a serving of this pencil-thin dry bread sitting atop the table as an appetizer? Much smaller than a baguette, breadsticks are said to have originated in the boot-shaped country in the 17th century. Nowadays, American restaurants sometimes serve them soft and warm, topped with cheese and garlic, or as a dessert with icing and cinnamon.",
+      product_image: "/b-4.png",
+    },
+    {
+      product_id: 10,
+      product_name: "BananaBread",
+      product_price: "Php 1700",
+      product_category: "Bread",
+      product_description: "To this category, we can also add zucchini bread. Both banana and zucchini bread are dense, moist, sweet treats, usually chemically leavened with baking soda or baking powder. It’s supposed that both of these “quick” breads got their start in the United States, where 18th-century bakers first used pearlash, a refined form of potash, to create carbon dioxide in dough. ",
+      product_image: "/b-5.png",
+    },
+   
+  ];
+
   return (
     <div className='shop'>
 
@@ -14,38 +100,14 @@ const Shop = () => {
       </section>
 
       <section className='shop__products'>
-        <div className='category__bar flex'>
-          <ul className='category__list flex'>
-            <NavLink to='/bread' className={({isActive}) => (isActive ? 'activeCategory' : '')}>
-              <li className='category__item'>Bread</li>
-            </NavLink>
-            <NavLink to='/all' className={({isActive}) => (isActive ? 'activeCategory' : 'activeCategory')}>
-              <li className='category__item'>All</li>
-            </NavLink>
-            <NavLink to='/pastry' className={({isActive}) => (isActive ? 'activeCategory' : '')} active={true}>
-              <li className='category__item'>Pastry</li>
-            </NavLink>
-            <NavLink to='/sandwich' className={({isActive}) => (isActive ? 'activeCategory' : '')}>
-              <li className='category__item'>Sandwich</li>
-            </NavLink>
-          </ul>
-        </div>
 
         <div className='products__container grid'>
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
+          {products.map((product) => <ProductCard key={product.product_id} product={product} />)}
         </div>
       </section>
        
     </div>
   );
-}
+};
 
 export default Shop;
